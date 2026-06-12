@@ -1,0 +1,50 @@
+{
+  "_doc": "Example sidecar for the PDF produced by examples/make_sample_pdf.py. Keys starting with '_' are ignored.",
+
+  "colors": {
+    "_doc": "Optional overrides/additions; [r, g, b] with components in 0..1.",
+    "question": [0.55, 0.25, 0.85]
+  },
+
+  "comments": [
+    {
+      "id": "overstated-accuracy",
+      "page": 1,
+      "anchor_text": "guarantees complete accuracy",
+      "severity": "blocker",
+      "title": "Overstated claim",
+      "body": "No system guarantees complete accuracy. Rephrase to describe what was measured."
+    },
+    {
+      "id": "relative-date",
+      "anchor_text": "as of last year",
+      "severity": "minor",
+      "title": "Date the reference",
+      "body": "Replace the relative date with an explicit year. Page omitted: all pages are searched."
+    },
+    {
+      "id": "logo-box",
+      "page": 1,
+      "rect": [355, 55, 535, 105],
+      "severity": "suggestion",
+      "title": "Image placement",
+      "body": "Rect anchor over the gray box: use for logos, charts, and image-only text."
+    },
+    {
+      "id": "sampling-window",
+      "page": 2,
+      "anchor_text": "14-day window",
+      "severity": "question",
+      "title": "Why 14 days?",
+      "body": "Custom severity defined in the colors header. Was a longer window considered?"
+    },
+    {
+      "id": "missing-anchor",
+      "page": 2,
+      "anchor_text": "text that does not exist in the sample",
+      "severity": "major",
+      "title": "Fallback demonstration",
+      "body": "This anchor never matches, so it becomes a sticky note at the top-left of page 2 and `apply` exits with code 1."
+    }
+  ]
+}
